@@ -1,0 +1,442 @@
+/* ==========================================================================
+   PlayPatch - Privacy Policy & Legal Design Stylesheet
+   ========================================================================== */
+
+.privacy-page {
+  padding-top: calc(var(--header-height) + 40px);
+  padding-bottom: 80px;
+}
+
+.privacy-header {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.privacy-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--grad-primary);
+}
+
+.privacy-header-content {
+  max-width: 800px;
+}
+
+.privacy-title {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.privacy-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.privacy-meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.privacy-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.privacy-tag strong {
+  color: var(--accent-cyan);
+}
+
+/* Privacy Main Layout (Sidebar + Content) */
+.privacy-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Sticky Sidebar */
+.privacy-sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar-heading {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.game-select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.game-select-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.game-select-dropdown {
+  width: 100%;
+  background: rgba(7, 9, 14, 0.8);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.game-select-dropdown:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+}
+
+.toc-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+}
+
+.toc-nav a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: var(--transition-fast);
+  border-left: 2px solid transparent;
+}
+
+.toc-nav a:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.toc-nav a.active {
+  color: var(--accent-cyan);
+  background: rgba(0, 242, 254, 0.08);
+  border-left-color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.sidebar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.btn-sidebar-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.btn-sidebar-action:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-cyan);
+}
+
+/* Privacy Policy Content Articles */
+.privacy-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  backdrop-filter: blur(10px);
+}
+
+.policy-game-banner {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.1) 0%, rgba(157, 78, 221, 0.05) 100%);
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.policy-game-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.policy-game-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.policy-game-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
+
+.policy-game-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.policy-game-pkg {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.policy-section {
+  margin-bottom: 40px;
+  scroll-margin-top: calc(var(--header-height) + 20px);
+}
+
+.policy-section h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 10px;
+}
+
+.policy-section h2 .sec-num {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--accent-cyan);
+}
+
+.policy-section h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 20px 0 10px;
+}
+
+.policy-section p {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.policy-section ul, .policy-section ol {
+  padding-left: 24px;
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.policy-section li {
+  margin-bottom: 8px;
+}
+
+.policy-section li strong {
+  color: var(--text-main);
+}
+
+/* Callout Box */
+.policy-callout {
+  background: rgba(0, 242, 254, 0.06);
+  border-left: 4px solid var(--accent-cyan);
+  padding: 18px 22px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 20px 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.policy-callout.warning {
+  background: rgba(255, 170, 0, 0.08);
+  border-left-color: var(--accent-amber);
+}
+
+/* Data Safety Table (Google Play Console Compliance) */
+.data-safety-table-wrap {
+  overflow-x: auto;
+  margin: 24px 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.data-safety-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.data-safety-table th {
+  background: rgba(7, 9, 14, 0.8);
+  padding: 14px 18px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.data-safety-table td {
+  padding: 14px 18px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.data-safety-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-safety-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.badge-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-tag.yes {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent-emerald);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-tag.no {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-muted);
+}
+
+/* Data Deletion Request Form Styles */
+.deletion-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.form-control {
+  background: rgba(7, 9, 14, 0.7);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.2);
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-help {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Privacy */
+@media (max-width: 900px) {
+  .privacy-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-sidebar {
+    position: static;
+    max-height: none;
+  }
+
+  .privacy-content {
+    padding: 28px;
+  }
+}

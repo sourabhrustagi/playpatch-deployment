@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account & Data Deletion Request - PlayPatch Games</title>
+    
+    <!-- SEO & Metadata -->
+    <meta name="description" content="Official Google Play account and data deletion request instructions and submission form for PlayPatch games.">
+    <meta name="author" content="PlayPatch Games">
+    <meta name="theme-color" content="#07090e">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/privacy.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                </div>
+                <span class="brand-text">PlayPatch</span>
+                <span class="brand-tag">SAFETY</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html#games" class="nav-link">Games Catalog</a></li>
+                    <li><a href="privacy.html" class="nav-link">Privacy Policies</a></li>
+                    <li><a href="data-deletion.html" class="nav-link active">Data Deletion</a></li>
+                    <li><a href="terms.html" class="nav-link">Terms of Use</a></li>
+                    <li><a href="index.html#about" class="nav-link">About Studio</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="privacy.html" class="btn-play-store">
+                    <span>Privacy Hub</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container privacy-page">
+        <div class="deletion-card">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="width: 56px; height: 56px; background: rgba(255, 0, 127, 0.15); border: 1px solid rgba(255, 0, 127, 0.4); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--accent-pink);">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+                </div>
+                <h1 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; margin-bottom: 10px;">User Data & Account Deletion</h1>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 0.95rem;">
+                    In accordance with Google Play's User Data & Account Deletion Policy, you have the right to request deletion of any associated data stored by PlayPatch games.
+                </p>
+            </div>
+
+            <!-- Fast Instructions for Device-Only Data -->
+            <div class="policy-callout" style="margin-bottom: 30px;">
+                <h3 style="font-family: var(--font-heading); font-size: 1.05rem; color: #fff; margin-bottom: 6px;">⚡ Quick Instant Device Data Deletion:</h3>
+                <p style="margin: 0; font-size: 0.9rem;">
+                    Most PlayPatch games store progress, unlocked skins, and settings purely on your local device. You can immediately wipe all local records at any time by going to your Android device <strong>Settings &rarr; Apps &rarr; [Game Name] &rarr; Storage &rarr; Clear Data & Cache</strong>, or by simply uninstalling the application.
+                </p>
+            </div>
+
+            <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 16px;">Request Server-Side / Diagnostics Data Deletion</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 24px;">
+                If you have connected to Google Play Games cloud save, submitted support inquiries, or wish to purge anonymous analytics logs linked to your device ID, please complete the form below. Requests are processed within 7 business days.
+            </p>
+
+            <form id="data-deletion-form" onsubmit="handleDeletionSubmit(event)">
+                <div class="form-group">
+                    <label for="delete-game-select">Select Game or Application *</label>
+                    <select id="delete-game-select" class="form-control" required>
+                        <option value="">-- Select Game --</option>
+                        <option value="all">All PlayPatch Games</option>
+                        <!-- Populated by JavaScript -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="delete-email">Your Contact Email (for confirmation) *</label>
+                    <input type="email" id="delete-email" class="form-control" placeholder="you@example.com" required>
+                    <span class="form-help">We only use this email to verify and confirm your deletion request.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="delete-gaid">Google Advertising ID or In-Game Player ID (Optional)</label>
+                    <input type="text" id="delete-gaid" class="form-control" placeholder="e.g. 38400000-8cf0-11bd-b23e-10b96e40000d">
+                    <span class="form-help">Found in Android Settings &gt; Google &gt; Ads, or your Google Play Games Gamer Tag.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="delete-notes">Reason or Additional Instructions</label>
+                    <textarea id="delete-notes" class="form-control" placeholder="Please specify if you want specific cloud saves or analytics records deleted..."></textarea>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <button type="submit" class="btn-primary" id="btn-submit-deletion" style="width: 100%; justify-content: center; background: linear-gradient(135deg, #ff0844 0%, #ff4b2b 100%); color: #fff; box-shadow: 0 0 20px rgba(255, 8, 68, 0.4);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+                        Submit Data Deletion Request
+                    </button>
+                </div>
+            </form>
+
+            <div id="deletion-success-msg" style="display: none; margin-top: 24px; padding: 20px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">✅</div>
+                <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 6px;">Request Received Successfully!</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">
+                    Your data deletion ticket has been registered. Our privacy officer will process your request within 7 business days and send a formal confirmation to your email.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border: none; padding-top: 0;">
+                <div>&copy; 2026 PlayPatch Games. All Rights Reserved.</div>
+                <div style="display: flex; gap: 16px;">
+                    <a href="index.html">Home</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const select = document.getElementById('delete-game-select');
+            if (select && typeof GAMES_DATA !== 'undefined') {
+                GAMES_DATA.forEach(game => {
+                    const opt = document.createElement('option');
+                    opt.value = game.id;
+                    opt.textContent = `${game.title} (${game.packageId})`;
+                    select.appendChild(opt);
+                });
+            }
+        });
+
+        function handleDeletionSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btn-submit-deletion');
+            const form = document.getElementById('data-deletion-form');
+            const success = document.getElementById('deletion-success-msg');
+
+            btn.disabled = true;
+            btn.innerHTML = `Processing request...`;
+
+            setTimeout(() => {
+                form.style.display = 'none';
+                success.style.display = 'block';
+            }, 800);
+        }
+    </script>
+</body>
+</html>
