@@ -29,11 +29,6 @@ function setupGameSelector() {
 
     selector.addEventListener('change', (e) => {
         const selectedId = e.target.value;
-        const selectedGame = getGameById(selectedId);
-        if (selectedGame && selectedGame.privacyUrl) {
-            window.location.href = selectedGame.privacyUrl;
-            return;
-        }
         updateUrlParam(selectedId);
         loadPolicyForGame(selectedId);
     });
@@ -49,10 +44,6 @@ function handleUrlParams() {
     if (gameParam) {
         const found = getGameById(gameParam);
         if (found) {
-            if (found.privacyUrl) {
-                window.location.replace(found.privacyUrl);
-                return;
-            }
             if (selector) selector.value = found.id;
             loadPolicyForGame(found.id);
             return;

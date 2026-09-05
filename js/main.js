@@ -114,7 +114,7 @@ function renderGames(gamesList) {
                         Game Info
                     </button>
                     <div style="display: flex; gap: 8px;">
-                        <a href="${game.privacyUrl || `privacy.html?game=${game.id}`}" class="btn-card-policy" title="Google Play Privacy Policy for ${game.title}">
+                        <a href="privacy.html?game=${game.id}" class="btn-card-policy" title="Google Play Privacy Policy for ${game.title}">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                             Privacy Policy
                         </a>
@@ -255,7 +255,7 @@ function openGameModal(game) {
     if (metaAge) metaAge.textContent = game.contentRating;
 
     if (playStoreLinkEl) playStoreLinkEl.href = game.playStoreUrl;
-    if (privacyLinkEl) privacyLinkEl.href = game.privacyUrl || `privacy.html?game=${game.id}`;
+    if (privacyLinkEl) privacyLinkEl.href = `privacy.html?game=${game.id}`;
 
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';

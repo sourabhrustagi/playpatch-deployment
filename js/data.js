@@ -91,13 +91,12 @@ const GAMES_DATA = [
         releaseDate: "2026-09-05",
         lastUpdated: "2026-09-05",
         playStoreUrl: "https://play.google.com/store/apps/details?id=com.mathpop.game",
-        privacyUrl: "privacy-mathpop.html",
         isFeatured: false,
         badge: "New",
         themeColor: "#6c5ce7",
         iconGradient: "linear-gradient(135deg, #6c5ce7 0%, #00b894 50%, #0984e3 100%)",
-        shortDescription: "Sharpen your mental math with levelled quizzes, a topics hub, math tricks, and a single-player battle mode — 100% offline, no ads, no data collection.",
-        description: "MathPop is a single-player, fully offline math practice game. Work through numbered Easy/Medium/Hard levels of multiple-choice problems with a par-time timer and step-by-step worked solutions, explore the Topics Hub for arithmetic, algebra, geometry, trigonometry and statistics, generate custom quizzes with Math Quest, learn speed-calculation shortcuts in the Math Tricks library, and race a locally-simulated opponent in Battle Mode. There are no accounts, no login, no ads, no analytics, and no network permission — everything runs and is stored entirely on your device.",
+        shortDescription: "Sharpen your mental math with levelled quizzes, a Topics Hub, a Math Tricks library, and a single-player Battle Mode. Free and supported by non-personalized ads.",
+        description: "MathPop is a single-player math practice game. Work through numbered Easy/Medium/Hard levels of multiple-choice problems with a par-time timer and step-by-step worked solutions, explore the Topics Hub for arithmetic, algebra, geometry, trigonometry and statistics, generate custom quizzes with Math Quest, learn speed-calculation shortcuts in the Math Tricks library, and race a locally-simulated opponent in Battle Mode. MathPop is free and supported by standard non-intrusive Google AdMob advertisements (non-personalized / child-directed), with no in-app purchases. Optional Google Play Games sign-in enables cloud saves and achievements.",
         features: [
             "Levelled quiz gameplay with par-time timer and worked solutions",
             "Topics Hub: formulas and practice for arithmetic to statistics",
@@ -106,18 +105,55 @@ const GAMES_DATA = [
             "Single-player Battle Mode against a locally-simulated bot",
             "In-game Scratchpad for working out problems by hand",
             "Local stats: accuracy, average solve time, streaks, history",
-            "100% offline — no permissions, no ads, no data collection"
+            "Free with non-personalized ads and zero in-app purchases"
         ],
-        tags: ["Educational", "Math", "Brain Training", "Quiz", "Offline", "Puzzle", "Kids", "No Ads"],
+        tags: ["Educational", "Math", "Brain Training", "Quiz", "Puzzle", "Kids", "Family"],
         privacyDisclosures: {
-            adsEnabled: false,
-            adNetworks: [],
-            analyticsEnabled: false,
+            adsEnabled: true,
+            adNetworks: ["Google AdMob"],
+            analyticsEnabled: true,
             inAppPurchases: false,
-            dataCollected: [],
-            thirdPartySDKs: [],
-            targetAgeGroup: "All ages (suitable for children)",
-            dataShared: "Nothing. MathPop requests no Android permissions (not even INTERNET), integrates no third-party SDKs, and makes no network calls. All progress, stats, and settings are stored only on your device via Android SharedPreferences and never leave it."
+            dataCollected: [
+                {
+                    type: "Device or Other Identifiers (App Set ID / Advertising ID)",
+                    purpose: "Advertising & Fraud Prevention",
+                    optional: false,
+                    details: "Used by Google AdMob to serve non-personalized banner and interstitial ads and to prevent ad fraud. Because MathPop is child-directed, ads are flagged for child-directed treatment and behavioral profiling is disabled"
+                },
+                {
+                    type: "App Activity & In-App Events",
+                    purpose: "Analytics",
+                    optional: false,
+                    details: "Anonymous usage events (levels started/completed, feature usage, session length) collected via Google Firebase Analytics to understand aggregate engagement and improve the game"
+                },
+                {
+                    type: "App Diagnostics & Crash Reports",
+                    purpose: "App Stability & Bug Fixing",
+                    optional: false,
+                    details: "Anonymous crash stack traces and performance diagnostics provided by Google Firebase Crashlytics"
+                },
+                {
+                    type: "Google Play Games Services Profile",
+                    purpose: "Cloud Save, Achievements & Leaderboards",
+                    optional: true,
+                    details: "If you choose to sign in, your Google Play Games player ID and gamer tag are used to sync progress and achievements. Sign-in is optional and the game is fully playable without it"
+                },
+                {
+                    type: "Local Game Preferences & Progress",
+                    purpose: "Gameplay Settings",
+                    optional: false,
+                    details: "Themes, sound toggles, onboarding difficulty, per-level progress and local stats stored on your device via Android SharedPreferences"
+                }
+            ],
+            thirdPartySDKs: [
+                { name: "Google Play Services", purpose: "Core Android operating system & platform stability services" },
+                { name: "Google AdMob (Google Mobile Ads SDK)", purpose: "Serving non-personalized, child-directed banner and interstitial ads" },
+                { name: "Google Firebase Analytics", purpose: "Anonymous aggregate usage and engagement analytics" },
+                { name: "Firebase Crashlytics", purpose: "Anonymous stability reporting and crash diagnostics" },
+                { name: "Google Play Games Services", purpose: "Optional cloud save, achievements and leaderboards for signed-in players" }
+            ],
+            targetAgeGroup: "Child-Directed (Google Play Families Policy)",
+            dataShared: "No personal data (name, email, precise location, phone) is collected or sold. Data sharing is limited to Google: AdMob for non-personalized ad serving, Firebase for analytics and crash diagnostics, and Play Games Services for optional cloud saves. Ads are served with child-directed treatment, disabling behavioral tracking and profiling."
         }
     }
 ];
