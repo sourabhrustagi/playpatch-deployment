@@ -30,7 +30,7 @@ const GAMES_DATA = [
         contentRating: "Everyone (3+)",
         releaseDate: "2026-08-01",
         lastUpdated: "2026-08-22",
-        playStoreUrl: "https://play.google.com/store/apps/details?id=com.playpatch.retroludo",
+        playStoreUrl: "https://play.google.com/store/apps/details?id=com.ludo2d.mobile",
         isFeatured: true,
         badge: "Featured",
         themeColor: "#ff3860",
@@ -78,6 +78,46 @@ const GAMES_DATA = [
             ],
             targetAgeGroup: "General Audience (3+)",
             dataShared: "No personal data (name, email, precise location, phone) is collected, stored, or sold. Third-party data sharing is strictly limited to Google AdMob for ad serving."
+        }
+    },
+    {
+        id: "mathpop",
+        title: "MathPop",
+        tagline: "Offline Math Practice & Brain-Training Quiz Game",
+        packageId: "com.mathpop.game",
+        category: "Educational",
+        version: "1.0.0",
+        contentRating: "Everyone",
+        releaseDate: "2026-09-05",
+        lastUpdated: "2026-09-05",
+        playStoreUrl: "https://play.google.com/store/apps/details?id=com.mathpop.game",
+        privacyUrl: "privacy-mathpop.html",
+        isFeatured: false,
+        badge: "New",
+        themeColor: "#6c5ce7",
+        iconGradient: "linear-gradient(135deg, #6c5ce7 0%, #00b894 50%, #0984e3 100%)",
+        shortDescription: "Sharpen your mental math with levelled quizzes, a topics hub, math tricks, and a single-player battle mode — 100% offline, no ads, no data collection.",
+        description: "MathPop is a single-player, fully offline math practice game. Work through numbered Easy/Medium/Hard levels of multiple-choice problems with a par-time timer and step-by-step worked solutions, explore the Topics Hub for arithmetic, algebra, geometry, trigonometry and statistics, generate custom quizzes with Math Quest, learn speed-calculation shortcuts in the Math Tricks library, and race a locally-simulated opponent in Battle Mode. There are no accounts, no login, no ads, no analytics, and no network permission — everything runs and is stored entirely on your device.",
+        features: [
+            "Levelled quiz gameplay with par-time timer and worked solutions",
+            "Topics Hub: formulas and practice for arithmetic to statistics",
+            "Math Quest custom quiz generator (topic, difficulty, pacing)",
+            "Math Tricks library of mental-math and Vedic shortcuts",
+            "Single-player Battle Mode against a locally-simulated bot",
+            "In-game Scratchpad for working out problems by hand",
+            "Local stats: accuracy, average solve time, streaks, history",
+            "100% offline — no permissions, no ads, no data collection"
+        ],
+        tags: ["Educational", "Math", "Brain Training", "Quiz", "Offline", "Puzzle", "Kids", "No Ads"],
+        privacyDisclosures: {
+            adsEnabled: false,
+            adNetworks: [],
+            analyticsEnabled: false,
+            inAppPurchases: false,
+            dataCollected: [],
+            thirdPartySDKs: [],
+            targetAgeGroup: "All ages (suitable for children)",
+            dataShared: "Nothing. MathPop requests no Android permissions (not even INTERNET), integrates no third-party SDKs, and makes no network calls. All progress, stats, and settings are stored only on your device via Android SharedPreferences and never leave it."
         }
     }
 ];
