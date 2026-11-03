@@ -155,6 +155,59 @@ const GAMES_DATA = [
             targetAgeGroup: "Child-Directed (Google Play Families Policy)",
             dataShared: "No personal data (name, email, precise location, phone) is collected or sold. Data sharing is limited to Google: AdMob for non-personalized ad serving, Firebase for analytics and crash diagnostics, and Play Games Services for optional cloud saves. Ads are served with child-directed treatment, disabling behavioral tracking and profiling."
         }
+    },
+    {
+        id: "bhakti-panchang",
+        title: "Bhakti Panchang",
+        tagline: "Daily Panchang, Festivals & Vrat Companion",
+        packageId: "com.indiaplay.bhaktipanchang",
+        category: "Lifestyle",
+        version: "1.0.0",
+        contentRating: "Everyone",
+        releaseDate: "2026-11-04",
+        lastUpdated: "2026-11-03",
+        playStoreUrl: "https://play.google.com/store/apps/details?id=com.indiaplay.bhaktipanchang",
+        isFeatured: false,
+        badge: "New",
+        themeColor: "#b23c0e",
+        iconGradient: "linear-gradient(135deg, #ff9933 0%, #b23c0e 60%, #ffd166 100%)",
+        shortDescription: "Daily panchang calculated on your phone, with festival and vrat reminders, a japa counter and a bhakti library. Free and supported by Google AdMob ads.",
+        description: "Bhakti Panchang gives you the daily panchang for your city, with tithi, festivals and vrat dates, plus reminders you choose to turn on. Track your japa with a counter and log, save items to your library, keep family tithi entries and follow your vrat progress. The panchang is calculated on your phone from the city you pick from a list, and the app has no accounts and does not ask for location. The app is free and shows Google AdMob ads.",
+        features: [
+            "Daily panchang calculated on your phone for your chosen city",
+            "Festival and vrat reminders you turn on",
+            "Japa counter with a log of your sessions",
+            "Saved library items and family tithi entries",
+            "Vrat progress and reading position kept across visits",
+            "Map and find-video buttons that open other apps",
+            "No account, no sign-in, no location permission"
+        ],
+        tags: ["Lifestyle", "Religion", "Panchang", "Calendar", "Festivals", "Japa", "Reminders"],
+        privacyDisclosures: {
+            adsEnabled: true,
+            adNetworks: ["Google AdMob"],
+            analyticsEnabled: false,
+            inAppPurchases: false,
+            dataCollected: [
+                {
+                    type: "Device or Other Identifiers (Advertising ID)",
+                    purpose: "Advertising & Fraud Prevention",
+                    optional: false,
+                    details: "Used by Google AdMob to show and measure ads and to prevent fraud. You can reset or delete your advertising ID or opt out of personalised ads in Android settings under Google > Ads"
+                },
+                {
+                    type: "Local App Settings & Personal Data",
+                    purpose: "App Functionality",
+                    optional: false,
+                    details: "City, language, theme, reminder settings, japa counts and log, saved library items, family tithi entries, vrat progress and reading position. These are stored only on your device and are never received or seen by us. Uninstalling the app deletes them"
+                }
+            ],
+            thirdPartySDKs: [
+                { name: "Google AdMob", purpose: "Serving ads and measuring ad performance, with fraud prevention" }
+            ],
+            targetAgeGroup: "General Audience (13+ not directed at children under 13)",
+            dataShared: "We do not collect your name, email, phone number or precise location, and we do not sell data. Ad identifiers and ad interaction data are shared with Google AdMob under Google's Privacy Policy. Map and video buttons open Google Maps or YouTube, which have their own privacy policies."
+        }
     }
 ];
 
