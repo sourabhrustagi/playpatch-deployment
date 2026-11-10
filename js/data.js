@@ -208,6 +208,72 @@ const GAMES_DATA = [
             targetAgeGroup: "General Audience (13+ not directed at children under 13)",
             dataShared: "We do not collect your name, email, phone number or precise location, and we do not sell data. Ad identifiers and ad interaction data are shared with Google AdMob under Google's Privacy Policy. Map and video buttons open Google Maps or YouTube, which have their own privacy policies."
         }
+    },
+    {
+        id: "dukaan-calc",
+        title: "Dukaan Calc",
+        tagline: "GST, Interest, Udhaar & Shop Tools for Indian Shopkeepers",
+        packageId: "com.indiaplay.dukaancalc",
+        category: "Tools",
+        version: "1.0.0",
+        contentRating: "Everyone",
+        releaseDate: "2026-11-10",
+        lastUpdated: "2026-11-10",
+        playStoreUrl: "https://play.google.com/store/apps/details?id=com.indiaplay.dukaancalc",
+        isFeatured: false,
+        badge: "New",
+        themeColor: "#1b3a8c",
+        iconGradient: "linear-gradient(135deg, #2a4fb0 0%, #0e2366 100%)",
+        shortDescription: "GST 2.0 bills, interest, udhaar, attendance and sale banners for shopkeepers. Works offline. Free and supported by Google AdMob ads.",
+        description: "Dukaan Calc is a set of 20+ shop tools: GST and HSN rates, a Bill Maker, interest and EMI, gold prices, udhaar khata, worker attendance, inventory, pack price compare, promotion banners and a tax calendar. The app has no accounts and no cloud storage. Your bills, customers, notes and settings are stored only on your phone. Backups and exports (PDF, CSV, Excel) are files you choose to save or share. The app is free and shows Google AdMob ads.",
+        features: [
+            "GST 2.0 rate lookup, HSN search and a multi-item Bill Maker",
+            "Udhaar khata, worker attendance register and inventory with CSV/Excel export",
+            "Interest, EMI, gold, margin, cash change and unit tools",
+            "Promotion banners you can share on WhatsApp",
+            "Secret notes behind a passcode with a recovery question",
+            "Backup and restore to a file you keep",
+            "No account, no sign-in, no location permission"
+        ],
+        tags: ["Tools", "Business", "GST", "Calculator", "Udhaar", "Billing", "India"],
+        privacyDisclosures: {
+            adsEnabled: true,
+            adNetworks: ["Google AdMob"],
+            analyticsEnabled: false,
+            inAppPurchases: false,
+            dataCollected: [
+                {
+                    type: "Device or Other Identifiers (Advertising ID)",
+                    purpose: "Advertising & Fraud Prevention",
+                    optional: false,
+                    details: "Used by Google AdMob to show and measure ads and to prevent fraud. You can reset or delete your advertising ID or opt out of personalised ads in Android settings under Google > Ads"
+                },
+                {
+                    type: "Local App Data (Shop & Customer Records)",
+                    purpose: "App Functionality",
+                    optional: false,
+                    details: "Shop name and GSTIN, bills and receipts, udhaar customers and balances, worker attendance, inventory, banners, secret notes and settings. These are stored only on your device and are never received or seen by us. Uninstalling the app deletes them unless you saved a backup file yourself"
+                },
+                {
+                    type: "Files You Export or Share",
+                    purpose: "Backup & Sharing",
+                    optional: true,
+                    details: "PDF, CSV, Excel and backup files are created only when you ask. They go to the app or folder you pick (for example WhatsApp or Files). We do not receive them. A logo you pick for a banner is read from your phone and not uploaded"
+                },
+                {
+                    type: "Biometric Unlock",
+                    purpose: "Protecting Secret Notes",
+                    optional: true,
+                    details: "If you turn on fingerprint or face unlock, Android checks it on the device. The app never receives or stores your biometric data"
+                }
+            ],
+            thirdPartySDKs: [
+                { name: "Google AdMob", purpose: "Serving ads and measuring ad performance, with fraud prevention" },
+                { name: "Android Biometric (AndroidX)", purpose: "Optional fingerprint or face unlock, handled by Android on your device" }
+            ],
+            targetAgeGroup: "General Audience (13+ not directed at children under 13)",
+            dataShared: "We do not collect your name, email, phone number, precise location, or your shop and customer records, and we do not sell data. Ad identifiers and ad interaction data are shared with Google AdMob under Google's Privacy Policy. Files you export are shared only with the app you choose."
+        }
     }
 ];
 
