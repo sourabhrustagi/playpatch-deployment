@@ -274,6 +274,71 @@ const GAMES_DATA = [
             targetAgeGroup: "General Audience (13+ not directed at children under 13)",
             dataShared: "We do not collect your name, email, phone number, precise location, or your shop and customer records, and we do not sell data. Ad identifiers and ad interaction data are shared with Google AdMob under Google's Privacy Policy. Files you export are shared only with the app you choose."
         }
+    },
+    {
+        id: "shabd-saathi",
+        title: "Shabd Saathi: Hindi Dictionary",
+        tagline: "Offline Hindi-English Dictionary & Vocabulary Trainer",
+        packageId: "com.indiaplay.shabdsaathi",
+        category: "Education",
+        version: "1.0.0",
+        contentRating: "Everyone",
+        releaseDate: "2026-11-10",
+        lastUpdated: "2026-11-10",
+        playStoreUrl: "https://play.google.com/store/apps/details?id=com.indiaplay.shabdsaathi",
+        isFeatured: false,
+        badge: "New",
+        themeColor: "#003892",
+        iconGradient: "linear-gradient(135deg, #1e5bc6 0%, #003892 100%)",
+        shortDescription: "Offline Hindi-English dictionary, flashcards, quizzes and a daily word challenge. Free and supported by Google AdMob ads.",
+        description: "Shabd Saathi is an offline Hindi-English dictionary and vocabulary trainer for students and competitive-exam aspirants. Look up words in both languages, learn with spaced-repetition flashcards, take quizzes, and complete a daily 5-word challenge. The app has no accounts and no server of its own. Your favourites, flashcard decks, progress and search history are stored only on your phone. Ads are shown by Google AdMob.",
+        features: [
+            "Offline Hindi-English dictionary with meanings, pronunciation and examples",
+            "Word of the Day with a home-screen widget",
+            "Flashcards with spaced repetition and custom decks",
+            "Optional daily review reminder",
+            "Daily 5-word challenge with streaks",
+            "Quizzes, idioms, one-word substitutions and spoken English",
+            "No account, no sign-in, no location or contacts permission"
+        ],
+        tags: ["Education", "Dictionary", "Hindi", "Vocabulary", "Flashcards", "English", "India"],
+        privacyDisclosures: {
+            adsEnabled: true,
+            adNetworks: ["Google AdMob"],
+            analyticsEnabled: false,
+            inAppPurchases: false,
+            dataCollected: [
+                {
+                    type: "Device or Other Identifiers (Advertising ID)",
+                    purpose: "Advertising & Fraud Prevention",
+                    optional: false,
+                    details: "Used by Google AdMob to show and measure ads and to prevent fraud. You can reset or delete your advertising ID or opt out of personalised ads in Android settings under Google > Ads"
+                },
+                {
+                    type: "Local App Data (Learning Data)",
+                    purpose: "App Functionality",
+                    optional: false,
+                    details: "Favourites, search history, flashcard decks and review progress, daily challenge progress and streak, reminder settings, language and ad-consent choices. These are stored only on your device and are never received or seen by us. Uninstalling the app or clearing its storage deletes them"
+                },
+                {
+                    type: "Notifications",
+                    purpose: "Review Reminders",
+                    optional: true,
+                    details: "Used only for the daily flashcard review reminder you turn on. Android asks for permission on Android 13 and later"
+                },
+                {
+                    type: "Voice Search (System Speech Recognition)",
+                    purpose: "Voice Search",
+                    optional: true,
+                    details: "Tapping the microphone button starts your phone's speech recognition service, which may be run by Google. The app itself does not request microphone permission and does not record audio"
+                }
+            ],
+            thirdPartySDKs: [
+                { name: "Google AdMob", purpose: "Serving banner, interstitial and rewarded ads and measuring ad performance" }
+            ],
+            targetAgeGroup: "General Audience (13+ not directed at children under 13)",
+            dataShared: "We do not collect your name, email, phone number, precise location, contacts, or your learning data, and we do not sell data. Ad identifiers and ad interaction data are shared with Google AdMob under Google's Privacy Policy. Voice search is processed by your phone's speech recognition service."
+        }
     }
 ];
 
